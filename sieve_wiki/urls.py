@@ -20,7 +20,11 @@ from wiki.urls import get_pattern as get_wiki_pattern
 from django_notify.urls import get_pattern as get_notify_pattern
 urlpatterns += patterns('',
                         (r'^notify/', get_notify_pattern()),
-                        (r'^wiki/', get_wiki_pattern())
+                        (r'^wiki/', get_wiki_pattern()),
+                        # necessario para fazer logout/login
+                        (r'^accounts/login/$', 'django.contrib.auth.views.login', {"template_name": "wiki/accounts/login.html"}),
+                        (r'^accounts/logout/$', 'django.contrib.auth.views.logout', {"next_page": "/wiki/"}),
+
 )
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns

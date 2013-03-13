@@ -178,6 +178,9 @@ LOGGING = {
     }
 }
 
+# Wiki
+WIKI_ACCOUNT_HANDLING = False
+
 try:
     from settings_local import *
 except ImportError:
