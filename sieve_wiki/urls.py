@@ -22,7 +22,7 @@ urlpatterns += patterns('',
                         # Disabling account creation
                         (r"^_accounts/sign-up/$", "django.views.defaults.page_not_found"),
                         (r'^notify/', get_notify_pattern()),
-                        (r'^wiki/', get_wiki_pattern()),
+                        (r'', get_wiki_pattern()),
 
 )
 
