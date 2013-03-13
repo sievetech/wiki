@@ -182,6 +182,7 @@ LOGGING = {
 
 # Wiki
 WIKI_ACCOUNT_HANDLING = False
+WIKI_ANONYMOUS = False
 
 try:
     from settings_local import *
