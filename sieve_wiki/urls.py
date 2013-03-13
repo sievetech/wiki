@@ -15,3 +15,13 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
 )
+
+from wiki.urls import get_pattern as get_wiki_pattern
+from django_notify.urls import get_pattern as get_notify_pattern
+urlpatterns += patterns('',
+                        (r'^notify/', get_notify_pattern()),
+                        (r'^wiki/', get_wiki_pattern())
+)
+
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+urlpatterns += staticfiles_urlpatterns()
