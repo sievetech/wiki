@@ -183,6 +183,7 @@ LOGGING = {
 # Wiki
 WIKI_ACCOUNT_HANDLING = True
 WIKI_ANONYMOUS = False
+WIKI_MARKDOWN_KWARGS = {'safe_mode':False}
 
 try:
     from settings_local import *
