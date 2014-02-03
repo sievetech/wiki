@@ -1,4 +1,4 @@
 Django==1.5
 MySQL-python==1.2.4
 Pillow==1.7.8
-wiki==0.0.17
+wiki==0.0.23
